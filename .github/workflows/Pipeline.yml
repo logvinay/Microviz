@@ -23,6 +23,6 @@ jobs:
       run: dotnet build ./Microviz --no-restore
     - name: Test
       run: dotnet test ./Microviz --no-build --verbosity normal
-    - name: Test
+    - name: Publish
       run: dotnet publish ./Microviz
 
