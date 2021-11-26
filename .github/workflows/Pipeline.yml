@@ -25,4 +25,9 @@ jobs:
       run: dotnet test ./Microviz --no-build --verbosity normal
     - name: Publish
       run: dotnet publish ./Microviz
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+       name: my-artifact
+       path: "./Microviz/"  
 
