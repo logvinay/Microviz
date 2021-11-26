@@ -17,17 +17,11 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 6.0.x
-    - name: Restore dependencies
-      run: dotnet restore ./Microviz
+    - name: Install dependencies
+      run: dotnet restore
     - name: Build
-      run: dotnet build ./Microviz --no-restore
+      run: dotnet build --configuration Release --no-restore
     - name: Test
-      run: dotnet test ./Microviz --no-build --verbosity normal
-    - name: Publish
-      run: dotnet publish ./Microviz
-    - name: Upload Artifacts
-      uses: actions/upload-artifact@v2
-      with:
-       name: my-artifact
-       path: "./Microviz/"  
+      run: dotnet test --no-restore --verbosity normal
+    
 
