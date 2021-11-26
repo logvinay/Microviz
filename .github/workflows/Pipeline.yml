@@ -18,10 +18,10 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore ./Microviz
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build ./Microviz --configuration Release --no-restore
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test ./Microviz --no-restore --verbosity normal
     
 
