@@ -28,7 +28,7 @@ jobs:
     - name: Upload WebApp1 Build Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: WebApp1
+        name: Microviz
         path: /home/runner/work/Microviz/Microviz/Microviz/bin/Release/net6.0/publish/
     
 
