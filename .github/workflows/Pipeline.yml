@@ -29,6 +29,6 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: WebApp1
-        path: /home/runner/work/Playground/Playground/src/WebApp1/bin/Debug/netcoreapp3.1/publish/
+        path: /home/runner/work/Microviz/Microviz/Microviz/bin/Release/net6.0/publish/
     
 
