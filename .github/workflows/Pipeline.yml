@@ -25,7 +25,7 @@ jobs:
       run: dotnet test ./Microviz --no-restore --verbosity normal
     - name: Publish
       run: dotnet publish ./Microviz --configuration Release
-    - name: Upload WebApp1 Build Artifact
+    - name: Upload Microviz Artifact
       uses: actions/upload-artifact@v2
       with:
         name: Microviz
