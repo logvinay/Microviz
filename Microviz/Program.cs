@@ -1,13 +1,16 @@
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
 {
-    // Add services to the container.
+    IWebHostEnvironment env = builder.Environment;
+    string documentFile = Path.Combine(env.ContentRootPath, "Document", "docfile.xml");
     IServiceCollection services = builder.Services;
     services.AddControllers();
     services.AddEndpointsApiExplorer();
-    services.AddSwaggerGen();
+    services.AddSwaggerGen(option => option.IncludeXmlComments(documentFile));
 }
 
 WebApplication app = builder.Build();
+
 {
     if (app.Environment.IsDevelopment())
     {
@@ -15,8 +18,9 @@ WebApplication app = builder.Build();
         app.UseSwaggerUI();
     }
     app.UseHttpsRedirection();
+    app.UseRouting();
     app.UseAuthorization();
-    app.MapControllers();
+    app.UseEndpoints(endpoint => endpoint.MapDefaultControllerRoute());
 }
 
 app.Run();

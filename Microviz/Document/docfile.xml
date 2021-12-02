@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microviz</name>
+    </assembly>
+    <members>
+        <member name="T:Microviz.Endpoints.Users.Gets.GetUserById">
+            <summary>
+            Get user by id
+            </summary>
+        </member>
+        <member name="M:Microviz.Endpoints.Users.Gets.GetUserById.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:Microviz.Endpoints.Users.Gets.GetUserById.ActionAsync(System.Guid)">
+            <summary>
+            Get user by id 
+            </summary>
+            <remarks>
+            Provide user id to get the user detail.
+            </remarks>
+            <param name="id">Id for the user</param>
+            <returns>A matching user if id matches in datastore else return null</returns>
+        </member>
+        <member name="T:Microviz.Endpoints.Users.Gets.GetUsers">
+            <summary>
+            Get users
+            </summary>
+        </member>
+        <member name="M:Microviz.Endpoints.Users.Gets.GetUsers.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:Microviz.Endpoints.Users.Gets.GetUsers.ActionAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            Get all users
+            </summary>
+            <remarks>
+            Get all users or 
+            get users based on any of params firstname, lastname, email and username 
+            </remarks>
+            <param name="firstname">Firstname of user</param>
+            <param name="email">Email of user</param>
+            <param name="lastname">Lastname of user</param>
+            <param name="username">Username of user</param>
+            <returns>All users matching the constraints or empty array if no users in the store</returns>
+        </member>
+        <member name="T:Microviz.Endpoints.Users.Gets.Records.Outgoing.UserDro">
+            <summary>
+            User record
+            </summary>
+        </member>
+        <member name="P:Microviz.Endpoints.Users.Gets.Records.Outgoing.UserDro.Id">
+            <summary>
+            UUID user id.
+            </summary>
+        </member>
+        <member name="P:Microviz.Endpoints.Users.Gets.Records.Outgoing.UserDro.Username">
+            <summary>
+            Unique name for user.
+            </summary>
+        </member>
+        <member name="P:Microviz.Endpoints.Users.Gets.Records.Outgoing.UserDro.Displayname">
+            <summary>
+            Display name for user.
+            </summary>
+        </member>
+        <member name="P:Microviz.Endpoints.Users.Gets.Records.Outgoing.UserDro.Age">
+            <summary>
+            Age of user.
+            </summary>
+        </member>
+        <member name="P:Microviz.Endpoints.Users.Gets.Records.Outgoing.UserDro.Email">
+            <summary>
+            Email of user.
+            </summary>
+        </member>
+        <member name="P:Microviz.Endpoints.Users.Gets.Records.Outgoing.UserDro.Contact">
+            <summary>
+            Contact number of user in format +00.0000000000.
+            </summary>
+        </member>
+        <member name="P:Microviz.Endpoints.Users.Gets.Records.Outgoing.UserDro.Firstname">
+            <summary>
+            Firstname of the user.
+            </summary>
+        </member>
+        <member name="P:Microviz.Endpoints.Users.Gets.Records.Outgoing.UserDro.Lastname">
+            <summary>
+            Lastname of the user.
+            </summary>
+        </member>
+        <member name="P:Microviz.Endpoints.Users.Gets.Records.Outgoing.UserDro.Middlename">
+            <summary>
+            Middlename of the user.
+            </summary>
+        </member>
+        <member name="T:Microviz.Endpoints.Users.Posts.CreateUser">
+            <summary>
+            Create a user
+            </summary>
+        </member>
+        <member name="M:Microviz.Endpoints.Users.Posts.CreateUser.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:Microviz.Endpoints.Users.Posts.CreateUser.ActionAsync(Microviz.Endpoints.Users.Posts.Records.Incoming.UserDwo)">
+            <summary>
+            Create a user
+            </summary>
+            <remarks>Create a user with provided user detail</remarks>
+            <returns></returns>
+        </member>
+        <member name="T:Microviz.Endpoints.Users.Posts.CreateUsers">
+            <summary>
+            Create users
+            </summary>
+        </member>
+        <member name="M:Microviz.Endpoints.Users.Posts.CreateUsers.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:Microviz.Endpoints.Users.Posts.CreateUsers.ActionAsync(System.Collections.Generic.IEnumerable{Microviz.Endpoints.Users.Posts.Records.Incoming.UserDwo})">
+            <summary>
+            Create multiple users
+            </summary>
+            <remarks>Create multiple users with provided users detail</remarks>
+            <returns></returns>
+        </member>
+        <member name="T:Microviz.Endpoints.Users.Posts.Records.Incoming.UserDwo">
+            <summary>
+            User write dto
+            </summary>
+        </member>
+        <member name="P:Microviz.Endpoints.Users.Posts.Records.Incoming.UserDwo.Username">
+            <summary>
+            Username of the user
+            </summary>
+        </member>
+        <member name="T:Microviz.Endpoints.Users.UsersController">
+            <summary>
+            Users controller
+            </summary>
+        </member>
+        <member name="M:Microviz.Endpoints.Users.UsersController.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:Microviz.Endpoints.Users.UsersController.EnsureAwait">
+            <summary>
+            Ensure await for all users controller
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
