@@ -1,8 +1,7 @@
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 {
-    IWebHostEnvironment env = builder.Environment;
-    string documentFile = Path.Combine(env.ContentRootPath, "Document", "docfile.xml");
+    string documentFile = Path.Combine(Environment.CurrentDirectory, "Document", "docfile.xml");
     IServiceCollection services = builder.Services;
     services.AddControllers();
     services.AddEndpointsApiExplorer();
