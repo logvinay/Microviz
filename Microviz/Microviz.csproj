@@ -23,4 +23,10 @@
     <Folder Include="Endpoints\Users\Puts\Records\Outgoing\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Document\docfile.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
